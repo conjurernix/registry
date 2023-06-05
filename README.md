@@ -5,6 +5,20 @@ sub-registries.
 
 ## Usage
 
+### Installing
+
+Add the following coordinates in your `deps.edn`
+
+```clojure
+net.clojars.drbuchkov/registry {:mvn/version "0.1.0-SNAPSHOT"}
+```
+
+or in your `project.clj`
+
+```clojure
+[net.clojars.drbuchkov/registry "0.1.0-SNAPSHOT"]
+```
+
 ### Require
 
 ```clojure
@@ -29,6 +43,7 @@ Use `reg-get` to retrieve the value for a key from a sub-registry:
 ```
 
 ### Updating Values
+
 Use `reg-update!` to update the value for a key in a sub-registry by applying a function to it:
 
 ```clojure 
