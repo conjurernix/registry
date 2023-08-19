@@ -10,13 +10,13 @@ sub-registries.
 Add the following coordinates in your `deps.edn`
 
 ```clojure
-io.github.drbuchkov/registry {:mvn/version "0.1.0-SNAPSHOT"}
+io.github.drbuchkov/registry {:mvn/version "0.0.2"}
 ```
 
 or in your `project.clj`
 
 ```clojure
-[io.github.drbuchkov/registry "0.1.0-SNAPSHOT"]
+[io.github.drbuchkov/registry "0.0.2"]
 ```
 
 ### Require
