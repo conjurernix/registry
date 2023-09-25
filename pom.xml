@@ -5,7 +5,7 @@
   <artifactId>registry</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>drbuchkov/registry</name>
-  <description>FIXME: my new library.</description>
+  <description>A dead simple library for Clojure that provides a global registry for associating keys with values, with support for sub-registries.</description>
   <url>https://github.com/drbuchkov/registry</url>
   <licenses>
     <license>
