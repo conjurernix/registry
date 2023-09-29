@@ -2,6 +2,15 @@
 
 (defonce ^:dynamic *registry* (atom {}))
 
+(defn reg-init!
+  "Initializes the sub-registry `subreg` with the value `value` registry."
+  [subreg value]
+  (swap! *registry* assoc subreg value))
+
+(defn reg-subreg [subreg]
+  "Gets the sub-registry `subreg` from the global registry."
+  (get-in @*registry* [subreg]))
+
 (defn reg-set!
   "Sets in the sub-registry `subreg` the `key` to `value`."
   [subreg key value]

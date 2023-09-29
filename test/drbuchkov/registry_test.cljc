@@ -4,9 +4,20 @@
 
 (defn with-fresh-reg [f]
   (sut/with-registry {}
-    (f)))
+                     (f)))
 
 (use-fixtures :each with-fresh-reg)
+
+
+(deftest reg-init!-test
+  (testing "Initializing a sub-registry"
+    (sut/reg-init! :foo {})
+    (is (= {} (get @sut/*registry* :foo)))))
+
+(deftest reg-subreg-test
+  (testing "Getting a sub-registry"
+    (sut/reg-init! :foo {})
+    (is (= {} (sut/reg-subreg :foo)))))
 
 (deftest reg-set!-test
   (testing "Setting and reading a value in the registry"
@@ -36,4 +47,3 @@
     (sut/reg-set! :foo :bar :baz)
     (sut/reg-clean)
     (is (= {} @sut/*registry*))))
-
